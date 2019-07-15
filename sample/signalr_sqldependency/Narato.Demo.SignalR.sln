@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Narato.Demo.SignalR.Web", "Narato.Demo.SignalR.Web\Narato.Demo.SignalR.Web.csproj", "{8C2C9FE3-FF6E-41E7-8B78-92E7EF5B5EB0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Narato.Demo.SignalR.Data", "Narato.Demo.SignalR.Data\Narato.Demo.SignalR.Data.csproj", "{157CB2A5-E7E6-499E-B072-38A6AC1766B8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Narato.Demo.SignalR.Api", "Narato.Demo.SignalR.Api\Narato.Demo.SignalR.Api.csproj", "{E8478D04-23A4-4098-BEC5-8D40CF61E20A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Narato.Demo.SignalR.Common", "Narato.Demo.SignalR.Common\Narato.Demo.SignalR.Common.csproj", "{E453DD6A-3DEF-4BF1-B3C2-CE034CC620DC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Narato.Demo.SignalR.UpdateService", "Narato.Demo.SignalR.UpdateService\Narato.Demo.SignalR.UpdateService.csproj", "{5505670C-C3DD-4C77-9DD0-81D0BEF21B7C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8B94FFB8-9DB2-4263-BE63-663C90BDCD23}"
+	ProjectSection(SolutionItems) = preProject
+		EnableSqlDependency.txt = EnableSqlDependency.txt
+		Limitations Notification Queries.txt = Limitations Notification Queries.txt
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Narato.Demo.SignalR.Admin", "Narato.Demo.SignalR.Admin\Narato.Demo.SignalR.Admin.csproj", "{F34E5715-E88B-4B89-B26A-43A5BCD8625E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8C2C9FE3-FF6E-41E7-8B78-92E7EF5B5EB0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C2C9FE3-FF6E-41E7-8B78-92E7EF5B5EB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C2C9FE3-FF6E-41E7-8B78-92E7EF5B5EB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C2C9FE3-FF6E-41E7-8B78-92E7EF5B5EB0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{157CB2A5-E7E6-499E-B072-38A6AC1766B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{157CB2A5-E7E6-499E-B072-38A6AC1766B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{157CB2A5-E7E6-499E-B072-38A6AC1766B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{157CB2A5-E7E6-499E-B072-38A6AC1766B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8478D04-23A4-4098-BEC5-8D40CF61E20A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8478D04-23A4-4098-BEC5-8D40CF61E20A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8478D04-23A4-4098-BEC5-8D40CF61E20A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8478D04-23A4-4098-BEC5-8D40CF61E20A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E453DD6A-3DEF-4BF1-B3C2-CE034CC620DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E453DD6A-3DEF-4BF1-B3C2-CE034CC620DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E453DD6A-3DEF-4BF1-B3C2-CE034CC620DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E453DD6A-3DEF-4BF1-B3C2-CE034CC620DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5505670C-C3DD-4C77-9DD0-81D0BEF21B7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5505670C-C3DD-4C77-9DD0-81D0BEF21B7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5505670C-C3DD-4C77-9DD0-81D0BEF21B7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5505670C-C3DD-4C77-9DD0-81D0BEF21B7C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F34E5715-E88B-4B89-B26A-43A5BCD8625E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F34E5715-E88B-4B89-B26A-43A5BCD8625E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F34E5715-E88B-4B89-B26A-43A5BCD8625E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F34E5715-E88B-4B89-B26A-43A5BCD8625E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,4 @@
+
+USE Narato.Demo; 
+GRANT SUBSCRIBE QUERY NOTIFICATIONS TO Narato; 
+ALTER DATABASE Narato.Demo SET ENABLE_BROKER with rollback immediate

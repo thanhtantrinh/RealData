@@ -1,0 +1,78 @@
+Writing Notification Queries
+
+
+You can set up notifications for SELECT and EXECUTE statements. When using an EXECUTE statement, SQL Server registers a notification for the command executed rather than the EXECUTE statement itself. The command must meet the requirements and limitations for a SELECT statement. When a command that registers a notification contains more than one statement, the Database Engine creates a notification for each statement in the batch.
+
+Query notifications are supported for SELECT statements that meet the following requirements: 
+
+•The projected columns in the SELECT statement must be explicitly stated, and table names must be qualified with two-part names. Notice that this means that all tables referenced in the statement must be in the same database.
+
+
+•The statement may not use the asterisk (*) or table_name.* syntax to specify columns.
+
+
+•The statement may not use unnamed columns or duplicate column names.
+
+
+•The statement must reference a base table.
+
+
+•The projected columns in the SELECT statement may not contain aggregate expressions unless the statement uses a GROUP BY expression. When a GROUP BY expression is provided, the select list may contain the aggregate functions COUNT_BIG() or SUM(). However, SUM() may not be specified for a nullable column. The statement may not specify HAVING, CUBE, or ROLLUP.
+
+
+•A projected column in the SELECT statement that is used as a simple expression must not appear more than once.
+
+
+•The statement must not include PIVOT or UNPIVOT operators.
+
+
+•The statement must not include the INTERSECT or EXCEPT operators.
+
+
+•The statement must not reference a view.
+
+
+•The statement must not contain any of the following: DISTINCT, COMPUTE or COMPUTE BY, or INTO.
+
+
+•The statement must not reference server global variables (@@variable_name).
+
+
+•The statement must not reference derived tables, temporary tables, or table variables.
+
+
+•The statement must not reference tables or views from other databases or servers.
+
+
+•The statement must not contain subqueries, outer joins, or self-joins.
+
+
+•The statement must not reference the large object types: text, ntext, and image.
+
+
+•The statement must not use the CONTAINS or FREETEXT full-text predicates.
+
+
+•The statement must not use rowset functions, including OPENROWSET and OPENQUERY.
+
+
+•The statement must not use any of the following aggregate functions: AVG, COUNT(*), MAX, MIN, STDEV, STDEVP, VAR, or VARP.
+
+
+•The statement must not use any nondeterministic functions, including ranking and windowing functions.
+
+
+•The statement must not contain user-defined aggregates.
+
+
+•The statement must not reference system tables or views, including catalog views and dynamic management views.
+
+
+•The statement must not include FOR BROWSE information.
+
+
+•The statement must not reference a queue.
+
+
+•The statement must not contain conditional statements that cannot change and cannot return results (for example, WHERE 1=0).
+

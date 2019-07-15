@@ -1,0 +1,84 @@
+﻿
+@{
+    ViewBag.Title = "index";
+}
+
+
+<script src="~/Scripts/jquery-1.10.2.js"></script>
+<script src="http://underscorejs.org/underscore-min.js"></script>
+
+<h2>Flight info Administration</h2>
+
+
+<table><tr><td><img src="~/images/departureIcon.png" width="40" height="40" /></td><td>&nbsp;&nbsp;</td><td><h2>Airport - Departures</h2></td></tr></table>
+
+
+<table id="DepartureBoard">
+    <tr>
+        <td style="width: 100px;font-size:20px">ID</td>
+        <td style="width: 100px;font-size:20px">Time</td>
+        <td style="width: 500px;font-size:20px">Destination</td>
+        <td style="width: 150px;font-size:20px">Flight no.</td>
+        <td style="width: 100px;font-size:20px">Gate</td>
+        <td style="width: 250px;font-size:20px">Status</td>
+        <td style="width: 50px;font-size:20px"></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>
+            <div id="destination"></div>
+        </td>
+    </tr>
+</table>
+
+
+
+<script>
+
+
+
+    (function ($) {
+
+       var departures;
+
+       $(document).ready(function () {
+
+           $.getJSON("http://localhost:53480/", function (result) {
+               departures = result;
+               $.each(result, function (i, field) {
+                   $("#DepartureBoard").append("<tr><td><input type='text' id='Id" + field.Id + "' value='" + field.Id + "'/></td><td><input type='text' id='Time" + field.Id + "' value='" + field.Time + "'/></td><td><input style='width: 500px' type='text' id='Destination" + field.Id + "' value='" + field.Destination + "'/></td><td><input type='text' id='FlightNo" + field.Id + "' value='" + field.FlightNo + "'/></td><td><input type='text' id='Gate" + field.Id + "' value='" + field.Gate + "'/></td><td><input type='text' id='Remarks" + field.Id + "' value='" + field.Remarks + "'/></td><td><button id='Save" + field.Id + "' >Save</button></td></tr></tr>");
+                   $("#Save" + field.Id).click(function () {
+                       var id = field.Id;
+                       var time = $("#Time" + id).val();
+                       var destination = $("#Destination" + id).val();
+                       var flightNo = $("#FlightNo" + id).val();
+                       var gate = $("#Gate" + id).val();
+                       var status = $("#Remarks" + id).val();
+
+                       var originalIndex = _.findIndex(departures, function (value) { return value.Id === id });
+
+                       departures[originalIndex].Time = time;
+                       departures[originalIndex].Destination = destination;
+                       departures[originalIndex].FlightNo = flightNo;
+                       departures[originalIndex].Gate = gate;
+                       departures[originalIndex].Remarks = status;
+
+                       $.post('http://localhost:53480', departures[originalIndex] );
+
+
+                       //$.ajax({
+                       //    url: "http://localhost:53480",
+                       //    type: 'POST',
+                       //    contentType: 'application/json',
+                       //    data: JSON.stringify(departures[originalIndex])
+                       //})
+                       
+                   });
+               });
+           });
+       });
+    })(jQuery);
+
+
+</script>
+
